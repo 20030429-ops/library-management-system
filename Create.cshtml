@@ -1,0 +1,81 @@
+﻿<h2>Library Borrowing System</h2>
+
+<form method="post">
+
+    <label>Book Title</label><br />
+    <input type="text" name="BookTitle" placeholder="Enter Book Title" /><br /><br />
+
+    <label>Student Name</label><br />
+    <input type="text" name="StudentName" placeholder="Enter Student Name" /><br /><br />
+
+    <label>Borrow Status</label><br />
+    <select name="BorrowStatus">
+        <option>Borrowed</option>
+        <option>Reserved</option>
+        <option>Overdue</option>
+        <option>Returned</option>
+    </select><br /><br />
+
+    <label>Loan Duration (Days)</label><br />
+    <input type="number" name="LoanDuration" min="0"
+           placeholder="Enter Loan Duration" /><br /><br />
+
+    <label>Maximum Borrowable Items</label><br />
+    <input type="number" name="MaxItems" min="0"
+           placeholder="Enter Maximum Items" /><br /><br />
+
+    <label>Renew Book</label>
+    <input type="checkbox" name="IsRenewed" /><br /><br />
+
+    <label>Fine Amount ($)</label><br />
+    <input type="number" name="FineAmount" min="0" /><br /><br />
+
+    <label>Book Rating</label><br />
+    <select name="Rating">
+        <option>1 Star</option>
+        <option>2 Stars</option>
+        <option>3 Stars</option>
+        <option>4 Stars</option>
+        <option>5 Stars</option>
+    </select><br /><br />
+
+    <label>Feedback</label><br />
+    <textarea name="Feedback"></textarea><br /><br />
+
+    <button type="submit">Submit Transaction</button>
+
+</form>
+
+<br />
+
+<h3>@ViewBag.Message</h3>
+
+<hr />
+
+<h2>Borrowing Transactions</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Book</th>
+        <th>Status</th>
+        <th>Loan Duration</th>
+        <th>Return Status</th>
+        <th>Fine</th>
+    </tr>
+
+    <tr>
+        <td>Harry Potter</td>
+        <td>Borrowed</td>
+        <td>14 Days</td>
+        <td>Not Returned</td>
+        <td>$0</td>
+    </tr>
+
+    <tr>
+        <td>Database Systems</td>
+        <td>Reserved</td>
+        <td>7 Days</td>
+        <td>Pending</td>
+        <td>$5</td>
+    </tr>
+</table>
